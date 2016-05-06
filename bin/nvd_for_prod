@@ -1,0 +1,11 @@
+#!/bin/bash
+VENDOR_PRODUCT=$1
+if [ "${VENDOR_PRODUCT}" == "" ] ; then
+  echo "VENDOR_PRODUCT argument missing"
+  exit -3
+fi
+
+YEAR=$2
+SEVERITY=$3
+
+rake nvd:for_prod["${VENDOR_PRODUCT}","${YEAR}","${SEVERITY}"]

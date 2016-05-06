@@ -1,0 +1,8 @@
+#!/bin/bash
+CVE_NAME=$1
+if [ "${CVE_NAME}" == "" ] ; then
+  echo "CVE_NAME argument missing"
+  exit -3
+fi
+
+rake nvd:cat[$CVE_NAME]
