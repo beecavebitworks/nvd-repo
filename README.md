@@ -22,8 +22,6 @@ access to CVE entries and change with minimal or no load on the database.
 Example files for an entry that has history.
 <pre>
 ./data/nvd/2015/CVE-2015-5343/
-- entry.json
-- entry.xml
 - entry-2016-04-14.json
 - entry-2016-04-14.xml
 </pre>
@@ -41,3 +39,9 @@ rake nvd:update
 
 ## Scripts
 TODO
+bin/nvd_cat [cve_name]
+bin/nvd_for_prod [year] [vendor_product_id]
+  where:
+  year is a single 4-digit year or '-'
+  vendor_product_id   [vendor]:[product_name]   e.g. microsoft:windows_10
+  
